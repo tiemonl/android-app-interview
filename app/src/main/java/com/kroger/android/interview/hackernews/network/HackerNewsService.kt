@@ -26,5 +26,5 @@ data class Item(
     val descendants: Int?,
     val kids: List<Int>?,
     val score: Int?,
-    val url: String?
+    val url: String?,
 ) : Parcelable

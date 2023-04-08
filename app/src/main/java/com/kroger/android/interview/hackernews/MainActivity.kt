@@ -3,6 +3,7 @@ package com.kroger.android.interview.hackernews
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.kroger.android.interview.hackernews.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
 /**
  * This Activity shows the Hacker News home screen
@@ -13,6 +14,8 @@ import com.kroger.android.interview.hackernews.databinding.ActivityMainBinding
  *
  * For reference: https://news.ycombinator.com/
  */
+
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     lateinit var app: HackerNewsApp

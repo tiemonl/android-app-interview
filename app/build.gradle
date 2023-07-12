@@ -5,6 +5,7 @@ plugins {
     id 'kotlin-parcelize'
     id 'kotlin-kapt'
     id 'com.google.dagger.hilt.android'
+    id 'de.mannodermaus.android-junit5'
 }
 
 android {
@@ -42,7 +43,7 @@ android {
 dependencies {
 
     // Android
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.8.10"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.8.22"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"
     implementation "androidx.core:core-ktx:1.10.0"
     implementation "androidx.appcompat:appcompat:1.6.1"
@@ -71,8 +72,12 @@ dependencies {
     implementation "com.google.dagger:hilt-android:2.45"
     kapt "com.google.dagger:hilt-compiler:2.45"
 
-    testImplementation 'junit:junit:4.13.2'
-    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0"
+    testImplementation "org.junit.jupiter:junit-jupiter-api:5.8.2"
+    testImplementation 'io.mockk:mockk:1.13.5'
+    testImplementation 'com.google.truth:truth:1.1'
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4'
+
+
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 }

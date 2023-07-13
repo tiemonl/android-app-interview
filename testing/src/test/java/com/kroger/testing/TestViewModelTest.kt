@@ -1,4 +1,4 @@
-package com.kroger.android.interview.hackernews.test
+package com.kroger.testing
 
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
@@ -16,21 +16,17 @@ internal class TestViewModelTest {
 
     @Test
     fun `Default value for the ui state flow should be UiState Loading`() {
-
     }
 
     @Test
     fun `When calling for cached data, should update the ui state flow with ShowUi and wasCacheData is true`() {
-
     }
 
     @Test
     fun `When calling for none cached data, should update the ui state flow with ShowUi and wasCacheData is false`() {
-
     }
 
     @Test
     fun `When calling for data and there is an exception, should update the ui state flow with Error with the error message`() {
-
     }
 }

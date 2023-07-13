@@ -1,4 +1,4 @@
-package com.kroger.android.interview.hackernews.test
+package com.kroger.testing
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -18,7 +18,8 @@ class TestViewModel(private val testRepo: TestRepo) : ViewModel() {
                     when (testRepo.getData(useCachedData)) {
                         is TestRepo.TestRepoResponse.NotCached -> false
                         is TestRepo.TestRepoResponse.Cached -> true
-                    }
+                        else -> false
+                    },
                 )
             }.getOrElse {
                 UiState.Error(it.message.orEmpty())
@@ -26,7 +27,6 @@ class TestViewModel(private val testRepo: TestRepo) : ViewModel() {
 
             mutableUiStateFlow.tryEmit(repoData)
         }
-
     }
 
     sealed class UiState {

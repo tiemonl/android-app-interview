@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-include ':app'
 rootProject.name = "Hacker News"
-include ':testing'
+include(":app")
+include(":testing")

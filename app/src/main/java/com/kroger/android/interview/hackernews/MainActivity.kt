@@ -3,7 +3,7 @@ package com.kroger.android.interview.hackernews
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.material.Text
+import androidx.compose.material3.Text
 import com.kroger.android.interview.hackernews.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
